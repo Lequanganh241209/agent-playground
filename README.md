@@ -81,5 +81,16 @@ with models for:
 
 ## Environment Variables
 
-Each app/package expects its own .env values for DB, auth, 
-and integrations.
+Create local `.env` files only for the workspace that needs them.
+
+### API (`apps/api/.env`)
+
+- `PORT` - Optional port for the Express API. Defaults to `4000`.
+
+### Web (`apps/web/.env.local`)
+
+- `NEXT_PUBLIC_*` - Use this prefix for browser-readable values, such as a public API base URL when one is added.
+
+### Database (`packages/db/.env`)
+
+- `DATABASE_URL` - PostgreSQL connection string used by Prisma.
